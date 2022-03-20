@@ -17,11 +17,9 @@ class RoleSeeder extends Seeder
     {
         $roles = [
             'ADM' => 'Admin',
-            'PMSK' => 'Pemasok',
-            'BLK' => 'Bulky',
-            'RTL' => 'Retail',
-            'WRG' => 'Warung',
-            'PBL' => 'Pembeli'
+            'MGR' => 'Manager',
+            'CSR' => 'Cashier',
+            'WTR' => 'Waiter',
         ];
 
         foreach($roles as $key => $role){

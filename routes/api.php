@@ -20,10 +20,7 @@ use Illuminate\Support\Facades\Route;
 */
 Route::middleware('api')->group(function(){
     Route::controller(AuthController::class)->prefix('auth')->group(function(){
-        Route::post('register-user', 'registerUser');
-        Route::post('register-person', 'registerPerson');
-        Route::post('register-address', 'registerAddress');
-        Route::post('register-store', 'save');
+        Route::post('register', 'save');
         Route::post('login', 'auth');
     });
 
@@ -40,12 +37,6 @@ Route::middleware(['api', 'auth:sanctum'])->group(function(){
     });
 
     Route::get('/profile', [ProfileController::class, 'getProfile']);
-
-    Route::middleware('role:pemasok')->group(function() {
-        Route::resource('product', ProductController::class);
-    });
-
-    Route::resource('storage', StorageController::class);
 });
 
 

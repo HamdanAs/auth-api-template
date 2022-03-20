@@ -15,14 +15,4 @@ class Person extends Model
     {
         return $this->belongsTo(User::class);
     }
-
-    public function address()
-    {
-        return $this->morphOne(Address::class, 'addressable');
-    }
-
-    public function storage()
-    {
-        return $this->hasMany(Storage::class);
-    }
 }

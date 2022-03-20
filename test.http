@@ -1,0 +1,36 @@
+POST http://127.0.0.1:8000/api/auth/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "21hamdanas@gmail.com",
+    "password": "12341234"
+}
+
+###
+
+POST http://127.0.0.1:8000/api/auth/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "21hamdanas@gmail.com",
+    "username": "hamdanasch",
+    "password": "12341234",
+    "password_confirmation": "12341234"
+}
+
+###
+
+GET http://127.0.0.1:8000/api/profile HTTP/1.1
+Authorization: Bearer 2|6obe6d2wAkBppjtyZb3h0AniBxurFjkUPOAw6wqe
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/api/logout HTTP/1.1
+Authorization: Bearer 3|MAq7KLDcOdQX1UWnrq5PXjBfU5F0zkLWHforX9Gf
+Accept: application/json
+
+###
+GET http://127.0.0.1:8000/api/user HTTP/1.1
+Authorization: Bearer 3|MAq7KLDcOdQX1UWnrq5PXjBfU5F0zkLWHforX9Gf
+Accept: application/json

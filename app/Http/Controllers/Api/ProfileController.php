@@ -10,7 +10,7 @@ class ProfileController extends BaseController
 {
     public function getProfile()
     {
-        $user = User::query()->with(['role', 'person', 'person.address'])->findOrFail(auth()->user()->id);
+        $user = User::query()->with(['role', 'person'])->findOrFail(auth()->user()->id);
 
         if(!$user){
             return $this->sendError("Data tidak ditemukan!");
